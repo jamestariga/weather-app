@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@200;400&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.flexbox {
+    background: linear-gradient(to right, #d65abd, #39399e);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.current {
+    padding: 2rem;
+    margin: 2rem;
+    height: 12rem;
+    width: 20rem;
+    text-align: center;
+}
+
+.city {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.temperature {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.weather {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.humidity {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
