@@ -1,1 +1,5 @@
+# Node module
 /node_modules
+
+# API Key value storage
+api.js
