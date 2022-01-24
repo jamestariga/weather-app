@@ -12,7 +12,7 @@ window.addEventListener('load', async () => {
                 getCurrent(resCurrent.data)
                 getImage(resCurrent.data.weather[0].icon)
                 const resFuture = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_KEY}`)
-                getFuture(resFuture.data)
+                getFuture(resFuture.data.daily)
             } catch (err) {
                 console.error(err)
             }
@@ -21,7 +21,7 @@ window.addEventListener('load', async () => {
 })
 
 const getImage = (data) => {
-    console.log(data)
+    // console.log(data)
     const weatherIcon = document.querySelector('.weather-icon')
     const img = document.createElement('img')
 
@@ -89,6 +89,32 @@ const getCurrent = (data) => {
     displayHumidity.textContent = 'Humidity: ' + humidity
 }
 
-const getFuture = (response) => {
-    console.log(response)
+const getFuture = (daily) => {
+    console.log(daily)
+    let futureForecast = ''
+    const forecast = document.querySelector('.forecast')
+    daily.forEach((day, index) => {
+        if (index !== 0 && index !== 7) {
+            // console.log(moment(day.dt * 1000).format('dddd'))
+            futureForecast += 
+            `<div class="wrap daily">
+                <div class="date">
+                    <h3>${moment(day.dt * 1000).format('ll')}</h3>
+                </div>
+                <div class="day">
+                    <h3>${moment(day.dt * 1000).format('dddd')}</h3>
+                </div>
+                <div class="temperature-daily">
+                    <h2>Max: ${day.temp.max}</h2>
+                    <h2>Min: ${day.temp.min}</h2>
+                </div>
+                <div class="weather"></div>
+                <div class="humidity"> 
+                </div>
+            </div>`
+            
+        }
+    })
+
+    forecast.innerHTML = futureForecast
 }
