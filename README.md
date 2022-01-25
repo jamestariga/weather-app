@@ -4,14 +4,40 @@ This weather app is built in vanilla JavaScript that utilizes the openweathermap
 ## API 
 Get your api key [here](link=https://openweathermap.org/)
 
+## Images
+The images for this project is from [icon8](link=https://icons8.com/icon/set/weather/fluency). 
+
+## Stack
+- JavaScript
+- Node.js
+- CSS
+- HTML
+- Axios
+- Moment.js
+
 ## Installation
+For this project, Node.js and npm / Yarn has to be installed in your machine. 
 ```
 npm init
 npm i axios
 ```
+Once you obtain your API key, make a separate js file and add:
+```
+const API = {
+    key: 'YOUR_API_KEY'
+} 
+
+export { API }
+```
 
 ## Current Features
-Currently this weather app provides the current temperature, weather, humidity, and city.
+- Responsive 
+- Provides current weather
+- Provides six days weather forecast
 
 ## Future Improvements
-The app is currently responsive but it is not mobile ready. There will be daily forecast coming soon as well as hourly forecast. Update in the current UI will come out soon.
+- Mobile ready
+- Add current time
+- Add hourly data
+- Add icons to the daily weather forecast
+- Host the application via Heroku

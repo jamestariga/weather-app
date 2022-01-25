@@ -84,9 +84,9 @@ const getCurrent = (data) => {
     const tempCel = Math.round((temp))
 
     displayCity.textContent = `${location}, ${country}`
-    displayTemperature.textContent = tempCel + '°'
-    displayWeather.textContent = 'Current: ' + weather
-    displayHumidity.textContent = 'Humidity: ' + humidity
+    displayTemperature.textContent = `${tempCel}°C`
+    displayWeather.textContent = `Current: ${weather}`
+    displayHumidity.textContent = `Humidity: ${humidity}`
 }
 
 const getFuture = (daily) => {
@@ -96,6 +96,7 @@ const getFuture = (daily) => {
     daily.forEach((day, index) => {
         if (index !== 0 && index !== 7) {
             // console.log(moment(day.dt * 1000).format('dddd'))
+            // console.log(day.weather[0].description)
             futureForecast += 
             `<div class="wrap daily">
                 <div class="date">
@@ -105,14 +106,16 @@ const getFuture = (daily) => {
                     <h3>${moment(day.dt * 1000).format('dddd')}</h3>
                 </div>
                 <div class="temperature-daily">
-                    <h2>Max: ${day.temp.max}</h2>
-                    <h2>Min: ${day.temp.min}</h2>
+                    <h2>High: ${Math.round(day.temp.max)}°C</h2>
+                    <h2>Low: ${Math.round(day.temp.min)}°C</h2>
                 </div>
-                <div class="weather"></div>
+                <div class="weather"> 
+                    <h5>Forecast: ${day.weather[0].description}</h5>
+                </div>
                 <div class="humidity"> 
+                    <h5>Humidity: ${day.humidity}</h5>
                 </div>
             </div>`
-            
         }
     })
 
