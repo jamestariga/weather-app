@@ -33,11 +33,10 @@ export { API }
 ## Current Features
 - Responsive 
 - Provides current weather
-- Provides six days weather forecast
+- Provides six days weather forecast with icons from openweathermap
 
 ## Future Improvements
 - Mobile ready
 - Add current time
 - Add hourly data
-- Add icons to the daily weather forecast
 - Host the application via Heroku
