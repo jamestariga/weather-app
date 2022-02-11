@@ -1,6 +1,6 @@
 # Weather App
 
-This weather app is built in vanilla JavaScript that utilizes the openweathermap API.
+This weather app is built in vanilla JavaScript that utilizes the openweathermap API. [Live preview](https://jamestariga-weather-app.netlify.app/)
 
 ## API
 
